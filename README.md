@@ -3,6 +3,10 @@
 >使用Croppie實現圖片剪裁及選轉功能。
 ###### Exmple
 ```
+html
+<div id="demo"></div>
+
+script
 $('#demo').croppie({  
     viewport: { width: 200, height: 200 },  
     boundary: { width: 800, height: 400},  
