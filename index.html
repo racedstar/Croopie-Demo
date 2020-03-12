@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="css/croppie.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>    
+    <div id="croppieArea">
+        <div id="viewDiv">
+            <img id="vanilla" class="my-image" src="" />
+        </div>
+        <div id="toolDiv">
+            <button id="btnLeft" class="btnVanilla" data-deg="-90">向左翻轉</button>
+            <button id="btnDownload" class="btnVanilla" >下載</button>
+            <button id="btnRight" class="btnVanilla" data-deg="90">向右翻轉</button>
+            <select id="selectOrietation" >
+                <option value="1">正常</option>
+                <option value="2">水平翻轉</option>
+                <option value="3">旋轉180度</option>
+                <option value="4">垂直翻轉</option>
+                <option value="5">水平翻轉後左轉90度</option>
+                <option value="6">順時鐘旋轉90度</option>
+                <option value="7">水平翻轉後右轉90度</option>
+                <option value="8">逆時鐘旋轉90度</option>
+            </select>
+        </div>
+    </div>
+    <div id="uploadArea"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/croppie.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>

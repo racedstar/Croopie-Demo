@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/croppie.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/croppie.js"></script>    
+</head>
+<body>
+    <img id="vanilla-demo" class="my-image" src="/img/02.jpg" />
+    <button id="result" class="vanilla-result" data-deg="-90">Result</button>
+    <button id="btnLeft" class="vanilla-rotate" data-deg="-90">Rotate Left</button>
+    <button id="btnRight" class="vanilla-rotate" data-deg="90">Rotate Right</button>    
+    <script>
+        let el = document.getElementById('vanilla-demo');
+        let btnLeft = document.getElementById('btnLeft');
+        let btnRight = document.getElementById('btnRight');
+        let btnResult = document.getElementById('result');
+        
+        let vanilla = new Croppie(el, {
+            viewport: { width: 200, height: 200 , type: 'circle'},//擷取大小 type預設為square 使用為circle設定為圓形
+            boundary: { width: 800, height: 400},//顯示範圍
+            showZoomer: true, //是否顯示縮放拉桿
+            //enableResize: true, //使用者是否可自訂擷取範圍
+            enableOrientation: true
+        });
+        
+
+        let croppieRotate = (ev) => {
+            let deg = ev.target.dataset.deg;
+            vanilla.rotate(deg);            
+        }
+
+        let croppieResult = () => {
+            vanilla.result({
+                type: 'base64',
+                size: 'viewport',
+                format: 'png'
+            }).then(function(src) {
+                var downloadImg = document.createElement('a');
+                downloadImg.setAttribute("href", src);
+                downloadImg.setAttribute("download", "");
+                var evObj = document.createEvent('MouseEvents');
+                evObj.initMouseEvent( 'click', true, true, window, 0, 0, 0, 0, 0, false, false, true, false, 0, null);
+                downloadImg.dispatchEvent(evObj);
+            });
+        }
+
+        btnResult.addEventListener('click', croppieResult);
+        btnLeft.addEventListener('click', croppieRotate);
+        btnRight.addEventListener('click', croppieRotate);
+
+    </script>
+</body>
+</html>
