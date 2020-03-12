@@ -1,9 +1,19 @@
 # 這個DEMO是做什麼用的
->使用Croppie實現圖片剪裁及選轉功能
+[Demo網址](https://racedstar.github.io/Croopie-Demo/index.html)
+>使用Croppie實現圖片剪裁及選轉功能。
+###### Exmple
+```
+$('#demo').croppie({  
+    viewport: { width: 200, height: 200 },  
+    boundary: { width: 800, height: 400},  
+    url: 'img/01.jpg',  
+});
+```
 
 ## Croppie是什麼?
 [官方網頁](https://foliotek.github.io/Croppie/)
->Croopie是一個能夠是讓jQuery實現圖片剪裁的簡單外掛。
+>Croopie是一個能夠是讓jQuery實現圖片剪裁的簡單外掛。  
+> `本次所使用的版本為2.6.4`
 
 ## 選項(Options)
 >這裡會先介紹一些基本屬性，若有需要查看所有屬性請至[官網](https://foliotek.github.io/Croppie/)。
