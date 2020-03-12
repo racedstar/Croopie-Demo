@@ -1,6 +1,6 @@
-# 這個DEMO是做什麼用的
-[Demo網址](https://racedstar.github.io/Croopie-Demo/index.html)
->使用Croppie實現圖片剪裁及選轉功能。
+# Croppie - JS 圖片裁切套件 demo
+Demo網址：[https://racedstar.github.io/Croopie-Demo/index.html](https://racedstar.github.io/Croopie-Demo/index.html)
+>使用Croppie實現圖片剪裁及旋轉功能
 ###### Exmple
 ```
 html
@@ -15,7 +15,7 @@ $('#demo').croppie({
 ```
 
 ## Croppie是什麼?
-[官方網頁](https://foliotek.github.io/Croppie/)
+官方網頁：[https://foliotek.github.io/Croppie/](https://foliotek.github.io/Croppie/)
 >Croopie是一個能夠是讓jQuery實現圖片剪裁的簡單外掛。  
 > `本次所使用的版本為2.6.4`
 
@@ -55,7 +55,7 @@ $('#demo').croppie({
   * orientation： `傳入以下整數值使圖片自訂義方向，需先啟用enableOrientation`  
     1.正常  
     2.水平翻轉  
-    3.選轉180度  
+    3.旋轉180度  
     4.垂直翻轉  
     5.水平翻轉後左轉90度  
     6.順時鐘懸轉90度  
@@ -73,7 +73,7 @@ $('#demo').croppie({
     * 'rawcanvas'
   * size
     * *[預設值]* 'viewport' 生成圖片大小與viewport大小一樣
-    * original 生成圖片大小與原圖比例一樣
+    * 'original' 生成圖片大小與原圖比例一樣
     * {width, height} 自定義大小，可以只輸入單一數值，系統將會依據比例自動計算尺寸
   * format
     * *[預設值]* 'png'
@@ -83,7 +83,7 @@ $('#demo').croppie({
     > 使用0到1之間的數字來決定圖片生成的質量  
     > `預設值：1`
   * circle [boole]
-    > 強制將圖片剪裁成圓形
+    > 強制將圖片剪裁為圓形
 * rotate(degrees)
   > 將圖片旋轉到指定的角度，只有在enableOrientation屬性啟用時作用  
   > `有效數值：90, 180, 270, -90, -180, -270`
