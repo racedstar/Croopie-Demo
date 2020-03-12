@@ -66,17 +66,17 @@ $('#demo').croppie({
   > 刪除一個croppie物件
 * result({type, size, format, quality, circle}) [Promise]
   * type
-    * [預設值] 'canvas'
+    * *[預設值]* 'canvas'
     * 'base64'
     * 'html'
     * 'blob'
     * 'rawcanvas'
   * size
-    * [預設值] 'viewport' 生成圖片大小與viewport大小一樣
+    * *[預設值]* 'viewport' 生成圖片大小與viewport大小一樣
     * original 生成圖片大小與原圖比例一樣
     * {width, height} 自定義大小，可以只輸入單一數值，系統將會依據比例自動計算尺寸
   * format
-    * [預設值] 'png'
+    * *[預設值]* 'png'
     * 'jpeg'
     * 'webp'
   * quality
